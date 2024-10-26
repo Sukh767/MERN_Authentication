@@ -43,3 +43,12 @@ const getUserProfile = asyncHandler(async (re,res) =>{
 const updateUserProfile = asyncHandler(async (re,res) =>{
     res.status(200).json({ message: 'Update User Profile'})
 });
+
+
+we have two different slices in redux
+1. authSlice -> it's going to just be dealing with local stuff so it's going to take the user data from the local storage,
+    that we get back from our API and put it in local storage and also put it in our auth state, so it'll have the ID, email 
+    and the name.(Not the token[http Cookies]) and it'll also have the logout where it will destroy it from local storage.
+
+2. userAPISlice -> where we actually make the request to the backend to login to Authenticate where we register, where we get our profile,
+    where we update our profile, thats stuff is going through the userApiSlice.
