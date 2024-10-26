@@ -1,0 +1,45 @@
+ **POST  /api/users --register a user
+- **POST  /api/users/auth --Authenticate a user and get token
+- **POST  /api/users/logout --Logout user and clear cookie
+- **GET  /api/users/profile --Get user profile
+- **PUT /api/users/profile --Update user profile
+
+
+// @desc       Auth user/set token
+// route       POST /api/users/auth
+// @access     Public
+const authUser = asyncHandler(async (re,res) =>{
+    res.status(200).json({ message: 'Auth User'})
+});
+
+
+// @desc       Register a new User
+// route       POST /api/users
+// @access     Public
+const registerUser = asyncHandler(async (re,res) =>{
+    res.status(200).json({ message: 'Register User'})
+});
+
+
+// @desc       logout user
+// route       POST /api/users/logout
+// @access     Public
+const logoutUser = asyncHandler(async (re,res) =>{
+    res.status(200).json({ message: 'Logout User'})
+});
+
+
+// @desc       Get User Profile
+// route       GET /api/users/profile
+// @access     Private
+const getUserProfile = asyncHandler(async (re,res) =>{
+    res.status(200).json({ message: 'User Profile'})
+});
+
+
+// @desc       Update User Profile
+// route       PUT /api/users/profile
+// @access     Private
+const updateUserProfile = asyncHandler(async (re,res) =>{
+    res.status(200).json({ message: 'Update User Profile'})
+});
